@@ -36,6 +36,11 @@ This should suffice to simulate a very rudimentary Happy-Path E2E to demo busine
 
 ## Commentary
 
+I decided to embrace this challenge by diving into Typescript, I've never used it before, but I've heard people say positive things about it.
+There were definitely plenty of surprises, but this solution seems to work.
+
+There are things I would do differently for a rewrite/refactor:
+
 1. Definitely needs a rework of the DAO and DTO layer.
 2. The DTOs could be refined further to accomodate granularity of CRUD requests, rather than being modelled by service-layer.
 3. The DAO is doing way too much right now, and plenty of that logic could easily and should be moved to the service-layer.
