@@ -34,3 +34,11 @@ The collection automagically sets collection variables based on response from la
 Your best bet is to start by executing the requests sequentially, or via Postman runner.
 This should suffice to simulate a very rudimentary Happy-Path E2E to demo business-level objectives.
 
+## Commentary
+
+1. Definitely needs a rework of the DAO and DTO layer.
+2. The DTOs could be refined further to accomodate granularity of CRUD requests, rather than being modelled by service-layer.
+3. The DAO is doing way too much right now, and plenty of that logic could easily and should be moved to the service-layer.
+4. Using the Singleton pattern for service-layer makes it very difficult/unfeasible to unit-test properly. Proper use of dependency-injection could make this possible.
+5. Next time, should properly define a spec, probably swagger, to properly design the domain before implementing. Would have helped avoid the above issues.
+
